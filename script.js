@@ -16,6 +16,6 @@ const startCountdown = (e) => {
         timeRemaining.textContent = Number(timeRemaining.textContent) - 1;
     }
 }
-const interval = setInterval(startCountdown, 1000);
 
 startButton.addEventListener("click", startCountdown());
+setInterval(startCountdown, 1000);
