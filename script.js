@@ -2,14 +2,16 @@ console.log('hello from index.js!');
 
 let timeRemaining = document.getElementById("time-remaining");
 const add30sButton = document.getElementById("add-30s-button");
+const add60sButton = document.getElementById("add-60s-button");
+const add5sButton = document.getElementById("add-5s-button");
 const startButton = document.getElementById("start-button");
 console.log(startButton.textContent)
 
-const add30ToTime = (e) => {
+const addToTime = (e) => {
     timeRemaining.textContent = Number(timeRemaining.textContent) + 30;
     console.log(timeRemaining)
 }
-add30sButton.addEventListener("click", add30ToTime);
+add30sButton.addEventListener("click", addToTime);
 
 const startCountdown = (e) => {
     if (Number(timeRemaining.textContent > 0)){
