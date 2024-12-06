@@ -12,6 +12,8 @@ const addToTime = (e) => {
     console.log(timeRemaining)
 }
 add30sButton.addEventListener("click", addToTime);
+add5sButton.addEventListener("click", addToTime);
+add60sButton.addEventListener("click", addToTime);
 
 const startCountdown = (e) => {
     if (Number(timeRemaining.textContent > 0)){
