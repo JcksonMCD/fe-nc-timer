@@ -12,10 +12,10 @@ const add30ToTime = (e) => {
 add30sButton.addEventListener("click", add30ToTime);
 
 const startCountdown = (e) => {
-    if (Number(timeRemaining.textContent > 1)){
+    if (Number(timeRemaining.textContent > 0)){
         timeRemaining.textContent = Number(timeRemaining.textContent) - 1;
     }
 }
 const interval = setInterval(startCountdown, 1000);
 
-startButton.addEventListener("click", startCountdown);
+startButton.addEventListener("click", startCountdown());
