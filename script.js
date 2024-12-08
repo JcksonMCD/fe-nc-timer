@@ -8,12 +8,12 @@ const startButton = document.getElementById("start-button");
 console.log(startButton.textContent)
 
 const addToTime = (e) => {
-    timeRemaining.textContent = Number(timeRemaining.textContent) + 30;
+    timeRemaining.textContent = Number(timeRemaining.textContent) + e;
     console.log(timeRemaining)
 }
-add30sButton.addEventListener("click", addToTime);
-add5sButton.addEventListener("click", addToTime);
-add60sButton.addEventListener("click", addToTime);
+add30sButton.addEventListener("click", addToTime(30));
+add5sButton.addEventListener("click", addToTime(5)); 
+add60sButton.addEventListener("click", addToTime(60));
 
 const startCountdown = (e) => {
     if (Number(timeRemaining.textContent > 0)){
@@ -21,5 +21,5 @@ const startCountdown = (e) => {
     }
 }
 
-startButton.addEventListener("click", startCountdown());
+startButton.addEventListener("click", startCountdown()); 
 setInterval(startCountdown, 1000);
