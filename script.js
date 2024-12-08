@@ -12,7 +12,7 @@ const addToTime = (e) => {
     console.log(timeRemaining)
 }
 add30sButton.addEventListener("click", addToTime(30));
-add5sButton.addEventListener("click", addToTime(5));
+add5sButton.addEventListener("click", addToTime(5)); 
 add60sButton.addEventListener("click", addToTime(60));
 
 const startCountdown = (e) => {
