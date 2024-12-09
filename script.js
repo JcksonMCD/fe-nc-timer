@@ -7,6 +7,8 @@ const add5sButton = document.getElementById("add-5s-button");
 const startButton = document.getElementById("start-button");
 console.log(startButton.textContent)
 
+let countdownInterval = null;
+
 const addToTime = (e, extraTime) => {
     timeRemaining.textContent = Number(timeRemaining.textContent) + extraTime;
 }
@@ -15,10 +17,16 @@ add5sButton.addEventListener("click", (e) => addToTime(e, 5));
 add60sButton.addEventListener("click", (e) => addToTime(e, 60));
 
 const startCountdown = (e) => {
-    if (Number(timeRemaining.textContent > 0)){
-        timeRemaining.textContent = Number(timeRemaining.textContent) - 1;
-        startButton.disabled = true;
+    const currentTimeRemaining = Number(timeRemaining.textContent);
+    if (currentTimeRemaining > 0){
+        timeRemaining.textContent = currentTimeRemaining - 1;
+    } else {
+        clearInterval(countdownInterval);
+        startButton.disabled = false;
     }
 }
 
-startButton.addEventListener("click", (e) => setInterval(startCountdown, 1000)); 
+startButton.addEventListener("click", (e) => {
+    countdownInterval = setInterval(startCountdown, 1000);
+    startButton.disabled = true;
+}); 
