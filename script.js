@@ -20,5 +20,4 @@ const startCountdown = (e) => {
     }
 }
 
-startButton.addEventListener("click", startCountdown()); 
-setInterval(startCountdown, 1000);
+startButton.addEventListener("click", (e) => setInterval(startCountdown, 1000)); 
