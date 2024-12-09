@@ -25,9 +25,9 @@ add5sButton.addEventListener("click", (e) => addToTime(e, 5));
 add60sButton.addEventListener("click", (e) => addToTime(e, 60));
 
 const startCountdown = (e) => {
-    const currentTimeRemaining = Number(timeRemaining.textContent);
-    if (currentTimeRemaining > 0){
-        timeRemaining.textContent = currentTimeRemaining - 1;
+    if (totalSeconds > 0){
+        totalSeconds--;
+        updateTimeDisplay();
     } else {
         clearInterval(countdownInterval);
         startButton.disabled = false;
