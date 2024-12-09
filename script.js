@@ -17,6 +17,7 @@ add60sButton.addEventListener("click", (e) => addToTime(e, 60));
 const startCountdown = (e) => {
     if (Number(timeRemaining.textContent > 0)){
         timeRemaining.textContent = Number(timeRemaining.textContent) - 1;
+        startButton.disabled = true;
     }
 }
 
