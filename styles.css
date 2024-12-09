@@ -100,3 +100,26 @@ button:hover {
   cursor: not-allowed;
 }
 
+#instructions {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+#instructions h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.instructions-list li {
+  margin: 0.5rem 0;
+  color: #7f8c8d;
+}
+
+
