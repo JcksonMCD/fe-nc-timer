@@ -39,7 +39,10 @@ startButton.addEventListener("click", (e) => {
     startButton.disabled = true;
 }); 
 
-restartButton.addEventListener("click", (e) => timeRemaining.textContent = 0);
+restartButton.addEventListener("click", (e) => {
+    timeRemaining.textContent = 0;
+    totalSeconds = 0;
+});
 
 pauseButton.addEventListener("click", (e) => {
     clearInterval(countdownInterval);
