@@ -5,6 +5,7 @@ const add30sButton = document.getElementById("add-30s-button");
 const add60sButton = document.getElementById("add-60s-button");
 const add5sButton = document.getElementById("add-5s-button");
 const startButton = document.getElementById("start-button");
+const restartButton = document.getElementById("reset-button");
 console.log(startButton.textContent)
 
 let countdownInterval = null;
@@ -30,3 +31,5 @@ startButton.addEventListener("click", (e) => {
     countdownInterval = setInterval(startCountdown, 1000);
     startButton.disabled = true;
 }); 
+
+restartButton.addEventListener("click", (e) => timeRemaining.textContent = 0);
