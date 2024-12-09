@@ -7,9 +7,17 @@ const restartButton = document.getElementById("reset-button");
 const pauseButton = document.getElementById("pause-button");
 
 let countdownInterval = null;
+let totalSeconds = 0;
+
+function updateTimeDisplay() {
+    const minutes = Math.floor(totalSeconds / 60); 
+    const seconds = totalSeconds % 60; 
+    timeRemaining.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+}
 
 const addToTime = (e, extraTime) => {
-    timeRemaining.textContent = Number(timeRemaining.textContent) + extraTime;
+    totalSeconds += extraTime;  
+    updateTimeDisplay();
 }
 
 add30sButton.addEventListener("click", (e) => addToTime(e, 30));
